@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -18,25 +27,141 @@
     ></script>
   </head>
   <body>
-    <div class="card" style="width: 18rem">
-      <img src="/img/fvs.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Veterinary Science</h5>
-        <p class="card-text">122 Faculties 1800+ Students 8 Departments</p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">1.asdfgasd 2.awerfgasd 3.fawefeaf</div>
+    <div
+      class="card md-3"
+      style="
+        width: 31rem;
+        border-radius: 0px 0px 25px 25px;
+        margin-top: 20px;
+        margin-left: 20px;
+      "
+    >
+      <div class="row g-0">
+        <div class="col-md-5" style="height: auto">
+          <img
+            src="/img/fvs.jpg"
+            class="card-img"
+            alt="..."
+            style="height: 200px"
+          />
         </div>
-        <a
-          class="btn btn-primary"
-          data-bs-toggle="collapse"
-          href="#collapseExample"
-          role="button"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Department
-        </a>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">Veterinary Science</h5>
+            <!-- <p class="card-text">122 Faculties 1800+ Students 8 Departments</p> -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-footer"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+      >
+        <div class="accoding">
+          <div class="row">
+            <div class="collapse" id="collapseExample">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                vero impedit quis est pariatur doloremque consequuntur sunt, a
+                dolorem laudantium, sit consequatur veniam eveniet eius fugiat
+                earum ab neque optio.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <label for="first">Departments </label>
+            </div>
+            <div class="col-md-6" style="text-align: right; padding-top: 8px">
+              <i class="fa-solid fa-chevron-down" id="collapseIcon"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="card md-3" style="width: 31rem; border-radius: 25px">
+      <div class="row g-0">
+        <div class="col-md-5" style="height: 200px">
+          <img
+            src="/img/fvs.jpg"
+            class="card-img-top"
+            alt="..."
+            style="height: 200px"
+          />
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">Veterinary Science</h5>
+            <p class="card-text">122 Faculties 1800+ Students 8 Departments</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-footer"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample1"
+      >
+        <div class="accoding">
+          <div class="row">
+            <div class="collapse" id="collapseExample1">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                vero impedit quis est pariatur doloremque consequuntur sunt, a
+                dolorem laudantium, sit consequatur veniam eveniet eius fugiat
+                earum ab neque optio.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <label for="first">Departments </label>
+            </div>
+            <div class="col-md-6" style="text-align: right; padding-top: 8px">
+              <i class="fa-solid fa-chevron-down" id="collapseIcon1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("collapseExample")
+        .addEventListener("show.bs.collapse", function () {
+          document
+            .getElementById("collapseIcon")
+            .classList.remove("fa-chevron-down");
+          document
+            .getElementById("collapseIcon")
+            .classList.add("fa-chevron-up");
+        });
+      document
+        .getElementById("collapseExample")
+        .addEventListener("hide.bs.collapse", function () {
+          document
+            .getElementById("collapseIcon")
+            .classList.remove("fa-chevron-up");
+          document
+            .getElementById("collapseIcon")
+            .classList.add("fa-chevron-down");
+        });
+      document
+        .getElementById("collapseExample1")
+        .addEventListener("show.bs.collapse", function () {
+          document
+            .getElementById("collapseIcon1")
+            .classList.remove("fa-chevron-down");
+          document
+            .getElementById("collapseIcon1")
+            .classList.add("fa-chevron-up");
+        });
+      document
+        .getElementById("collapseExample1")
+        .addEventListener("hide.bs.collapse", function () {
+          document
+            .getElementById("collapseIcon1")
+            .classList.remove("fa-chevron-up");
+          document
+            .getElementById("collapseIcon1")
+            .classList.add("fa-chevron-down");
+        });
+    </script>
   </body>
 </html>
